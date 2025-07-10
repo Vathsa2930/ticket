@@ -11,6 +11,6 @@ services:
       - key: PYTHON_VERSION
         value: 3.11
       - key: SECRET_KEY
-        value: your-secret-key-here
+        value: your-secret-key
       - key: DEBUG
         value: False
