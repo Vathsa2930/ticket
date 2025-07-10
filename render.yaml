@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: django-react-app
+    env: python
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn support_project.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: support_project.settings
+      - key: PYTHON_VERSION
+        value: 3.11
+      - key: SECRET_KEY
+        value: your-secret-key-here
+      - key: DEBUG
+        value: False
